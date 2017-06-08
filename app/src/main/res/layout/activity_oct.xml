@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="waszka.kalkocznik.OctActivity">
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Convert"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Number" />
+
+    <Button
+        android:id="@+id/button_Convert"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Convert"
+        android:onClick="Convert"
+        app:layout_constraintBottom_toTopOf="@+id/button_sysback"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_number" />
+
+    <Button
+        android:id="@+id/button_sysback"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Menu"
+        android:onClick="BackSys"
+        app:layout_constraintBottom_toTopOf="@+id/t_score"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Convert" />
+
+    <TextView
+        android:id="@+id/t_score"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_sysback" />
+
+</android.support.constraint.ConstraintLayout>

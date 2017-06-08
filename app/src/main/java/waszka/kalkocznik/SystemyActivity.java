@@ -10,38 +10,40 @@ import android.widget.TextView;
 
 public class SystemyActivity extends AppCompatActivity {
 
-    EditText et_number;
-    Button button_Convert;
-    TextView t_score;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_systemy);
-
-        et_number = (EditText) findViewById(R.id.et_number);
-        button_Convert = (Button) findViewById(R.id.button_Convert);
-        t_score = (TextView) findViewById(R.id.t_score);
-
     }
 
-    public void Convert(View view)
-    {
-        int dec = Integer.parseInt(et_number.getText().toString());
-        String bin = Integer.toBinaryString(dec);
-        String oct = Integer.toOctalString(dec);
-        String hex = Integer.toHexString(dec);
-
-        t_score.setText("DEC: " + dec + "\n\n" +
-                "BIN: " + bin + "\n\n" +
-                "OCT: " + oct + "\n\n" +
-                "HEX: " + hex);
-
-    }
 
     public void BackSys(View view)
     {
         Intent myIntent = new Intent(SystemyActivity.this, MenuActivity.class);
+        startActivity(myIntent);
+    }
+
+    public void GoBin(View view)
+    {
+        Intent myIntent = new Intent(SystemyActivity.this, BinActivity.class);
+        startActivity(myIntent);
+    }
+
+    public void GoDec(View view)
+    {
+        Intent myIntent = new Intent(SystemyActivity.this, DecActivity.class);
+        startActivity(myIntent);
+    }
+
+    public void GoOct(View view)
+    {
+        Intent myIntent = new Intent(SystemyActivity.this, OctActivity.class);
+        startActivity(myIntent);
+    }
+
+    public void GoHex(View view)
+    {
+        Intent myIntent = new Intent(SystemyActivity.this, HexActivity.class);
         startActivity(myIntent);
     }
 }

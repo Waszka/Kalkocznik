@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".SystemyActivity" />
         <activity android:name=".CalculatorActivity" />
-        <activity android:name=".FiguresActivity"></activity>
+        <activity android:name=".FiguresActivity" />
+        <activity android:name=".DecActivity" />
+        <activity android:name=".BinActivity" />
+        <activity android:name=".OctActivity" />
+        <activity android:name=".HexActivity"></activity>
     </application>
 
 </manifest>
