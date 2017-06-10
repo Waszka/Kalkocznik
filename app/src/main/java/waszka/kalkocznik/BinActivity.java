@@ -26,10 +26,10 @@ public class BinActivity extends AppCompatActivity {
 
     public void Convert(View view)
     {
+        int dec = Integer.parseInt(String.valueOf(et_number.getText()), 2);
         int bin = Integer.parseInt(et_number.getText().toString());
-        String dec = Integer.toString(bin);
-        String oct = Integer.toOctalString(bin);
-        String hex = Integer.toHexString(bin);
+        String oct = Integer.toOctalString(dec);
+        String hex = Integer.toHexString(dec);
 
         t_score.setText("DEC: " + dec + "\n\n" +
                 "BIN: " + bin + "\n\n" +

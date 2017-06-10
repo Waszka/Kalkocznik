@@ -22,7 +22,9 @@
         <activity android:name=".DecActivity" />
         <activity android:name=".BinActivity" />
         <activity android:name=".OctActivity" />
-        <activity android:name=".HexActivity"></activity>
+        <activity android:name=".HexActivity" />
+        <activity android:name=".TwoDActivity" />
+        <activity android:name=".ThreeDActivity"></activity>
     </application>
 
 </manifest>

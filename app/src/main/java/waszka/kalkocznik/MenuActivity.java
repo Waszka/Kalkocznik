@@ -34,6 +34,7 @@ public class MenuActivity extends AppCompatActivity {
     public void GoExit(View view)
     {
         finish();
+        System.exit(0);
     }
 
 

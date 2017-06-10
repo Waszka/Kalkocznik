@@ -6,4 +6,36 @@
     android:layout_height="match_parent"
     tools:context="waszka.kalkocznik.FiguresActivity">
 
+    <Button
+        android:id="@+id/button_2d"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:onClick="Go2d"
+        android:text="Plane figure"
+        app:layout_constraintBottom_toTopOf="@+id/button_3d"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_3d"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:onClick="Go3d"
+        android:text="Solid"
+        app:layout_constraintBottom_toTopOf="@+id/button_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_2d" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:onClick="GoBack"
+        android:text="Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_3d" />
 </android.support.constraint.ConstraintLayout>
