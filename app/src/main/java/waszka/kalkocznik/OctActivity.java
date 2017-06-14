@@ -26,16 +26,19 @@ public class OctActivity extends AppCompatActivity {
 
     public void Convert(View view)
     {
-        int dec = Integer.parseInt(String.valueOf(et_number.getText()), 8);
-        int oct = Integer.parseInt(et_number.getText().toString());
-        String bin = Integer.toBinaryString(dec);
-        String hex = Integer.toHexString(dec);
+        if(et_number.getText().toString().matches("^0[1-7][0-7]*$")) {
+            int dec = Integer.parseInt(String.valueOf(et_number.getText()), 8);
+            int oct = Integer.parseInt(et_number.getText().toString());
+            String bin = Integer.toBinaryString(dec);
+            String hex = Integer.toHexString(dec);
 
-        t_score.setText("DEC: " + dec + "\n\n" +
-                "BIN: " + bin + "\n\n" +
-                "OCT: " + oct + "\n\n" +
-                "HEX: " + hex);
-
+            t_score.setText("DEC: " + dec + "\n\n" +
+                    "BIN: " + bin + "\n\n" +
+                    "OCT: " + oct + "\n\n" +
+                    "HEX: " + hex);
+        }else{
+            //daj tu TOASTA
+        }
     }
 
     public void BackSys(View view)

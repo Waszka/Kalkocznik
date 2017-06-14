@@ -26,16 +26,19 @@ public class BinActivity extends AppCompatActivity {
 
     public void Convert(View view)
     {
-        int dec = Integer.parseInt(String.valueOf(et_number.getText()), 2);
-        int bin = Integer.parseInt(et_number.getText().toString());
-        String oct = Integer.toOctalString(dec);
-        String hex = Integer.toHexString(dec);
+        if(et_number.getText().toString().matches("[01]*")) {
+            int dec = Integer.parseInt(String.valueOf(et_number.getText()), 2);
+            int bin = Integer.parseInt(et_number.getText().toString());
+            String oct = Integer.toOctalString(dec);
+            String hex = Integer.toHexString(dec);
 
-        t_score.setText("DEC: " + dec + "\n\n" +
-                "BIN: " + bin + "\n\n" +
-                "OCT: " + oct + "\n\n" +
-                "HEX: " + hex);
-
+            t_score.setText("DEC: " + dec + "\n\n" +
+                    "BIN: " + bin + "\n\n" +
+                    "OCT: " + oct + "\n\n" +
+                    "HEX: " + hex);
+        }else{
+            //daj tu TOASTA
+        }
     }
 
     public void BackSys(View view)

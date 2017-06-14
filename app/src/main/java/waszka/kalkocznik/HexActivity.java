@@ -26,16 +26,20 @@ public class HexActivity extends AppCompatActivity {
 
     public void Convert(View view)
     {
-        int dec = Integer.parseInt(String.valueOf(et_number.getText()), 16);
-        int hex = Integer.parseInt(et_number.getText().toString());
-        String bin = Integer.toBinaryString(dec);
-        String oct = Integer.toOctalString(dec);
 
-        t_score.setText("DEC: " + dec + "\n\n" +
-                "BIN: " + bin + "\n\n" +
-                "OCT: " + oct + "\n\n" +
-                "HEX: " + hex);
+        if(et_number.getText().toString().matches("-?[0-9a-fA-F]+")) {
+            int dec = Integer.parseInt(String.valueOf(et_number.getText()), 16);
+            String hex = et_number.getText().toString();
+            String bin = Integer.toBinaryString(dec);
+            String oct = Integer.toOctalString(dec);
 
+            t_score.setText("DEC: " + dec + "\n\n" +
+                    "BIN: " + bin + "\n\n" +
+                    "OCT: " + oct + "\n\n" +
+                    "HEX: " + hex);
+        }else{
+            //daj tu TOASTA
+        }
     }
 
     public void BackSys(View view)
