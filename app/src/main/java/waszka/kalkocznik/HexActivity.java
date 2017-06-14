@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HexActivity extends AppCompatActivity {
 
@@ -26,16 +27,20 @@ public class HexActivity extends AppCompatActivity {
 
     public void Convert(View view)
     {
-        int dec = Integer.parseInt(String.valueOf(et_number.getText()), 16);
-        int hex = Integer.parseInt(et_number.getText().toString());
-        String bin = Integer.toBinaryString(dec);
-        String oct = Integer.toOctalString(dec);
 
-        t_score.setText("DEC: " + dec + "\n\n" +
-                "BIN: " + bin + "\n\n" +
-                "OCT: " + oct + "\n\n" +
-                "HEX: " + hex);
+        if(et_number.getText().toString().matches("-?[0-9a-fA-F]+")) {
+            int dec = Integer.parseInt(String.valueOf(et_number.getText()), 16);
+            String hex = et_number.getText().toString();
+            String bin = Integer.toBinaryString(dec);
+            String oct = Integer.toOctalString(dec);
 
+            t_score.setText("DEC: " + dec + "\n\n" +
+                    "BIN: " + bin + "\n\n" +
+                    "OCT: " + oct + "\n\n" +
+                    "HEX: " + hex);
+        }else{
+            Toast.makeText(getApplicationContext(),"Symbol range 0-9 and A-F",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void BackSys(View view)

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class OctActivity extends AppCompatActivity {
 
@@ -26,16 +27,19 @@ public class OctActivity extends AppCompatActivity {
 
     public void Convert(View view)
     {
-        int dec = Integer.parseInt(String.valueOf(et_number.getText()), 8);
-        int oct = Integer.parseInt(et_number.getText().toString());
-        String bin = Integer.toBinaryString(dec);
-        String hex = Integer.toHexString(dec);
+        if(et_number.getText().toString().matches("-?[0-7]+")) {
+            int dec = Integer.parseInt(String.valueOf(et_number.getText()), 8);
+            int oct = Integer.parseInt(et_number.getText().toString());
+            String bin = Integer.toBinaryString(dec);
+            String hex = Integer.toHexString(dec);
 
-        t_score.setText("DEC: " + dec + "\n\n" +
-                "BIN: " + bin + "\n\n" +
-                "OCT: " + oct + "\n\n" +
-                "HEX: " + hex);
-
+            t_score.setText("DEC: " + dec + "\n\n" +
+                    "BIN: " + bin + "\n\n" +
+                    "OCT: " + oct + "\n\n" +
+                    "HEX: " + hex);
+        }else{
+            Toast.makeText(getApplicationContext(),"Symbol range 0-7",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void BackSys(View view)
