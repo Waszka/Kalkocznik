@@ -45,6 +45,7 @@
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:ems="10"
+        android:hint="Write a hex system"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/button_Convert"
         app:layout_constraintLeft_toLeftOf="parent"
